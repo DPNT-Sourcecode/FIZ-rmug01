@@ -20,7 +20,12 @@ public class FizzBuzzSolution {
     	Pattern p = Pattern.compile(pattern);
     	Matcher m = p.matcher(number.toString());
     	if(number>10 && m.matches()) {
-    		response = "deluxe";
+    		if(number%2!=0) {
+    			response = "fake deluxe";
+    		} else {
+    			response = "deluxe";
+    		}
+    		
     		deluxeTrue = true;
     	}
     	

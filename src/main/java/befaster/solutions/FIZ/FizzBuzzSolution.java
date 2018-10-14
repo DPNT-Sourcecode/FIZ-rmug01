@@ -4,7 +4,7 @@ import befaster.runner.SolutionNotImplementedException;
 
 public class FizzBuzzSolution {
 
-    public String fizzBuzz(Integer number) {
+    public static String fizzBuzz(Integer number) {
     	if(number <1 || number>9999) {
     		return "Illegal Input";
     	}
@@ -25,6 +25,12 @@ public class FizzBuzzSolution {
     	}
     	
         return response;
+    }
+    
+    public static void main (String[] args) {
+    	//15 30 105
+    	String response = fizzBuzz(15);
+    	System.out.println(response);
     }
 
 }

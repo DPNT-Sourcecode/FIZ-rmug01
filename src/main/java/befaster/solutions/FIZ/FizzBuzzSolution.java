@@ -47,8 +47,9 @@ public class FizzBuzzSolution {
     	if(fizzTrue && buzzTrue) {
     		if(deluxeTrue) {
     			response = "fizz buzz deluxe";
+    		} else {
+    			response = "fizz buzz";
     		}
-    		response = "fizz buzz";
     	}
     	
         return response;

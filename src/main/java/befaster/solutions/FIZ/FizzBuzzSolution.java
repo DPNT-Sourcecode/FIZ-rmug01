@@ -28,9 +28,16 @@ public class FizzBuzzSolution {
     			deluxeResponse = "fake deluxe";
     			fakeDeluxeTrue = true;
     		}
-    		deluxeTrue = true;
+    		//deluxeTrue = true;
     		response = deluxeResponse;
     		
+    	}
+    	
+    	if (number%5 == 0 && Integer.valueOf(number).toString().indexOf("5") != -1 ) {
+    		deluxeTrue = true;
+    	}
+    	if (number%3 == 0 && Integer.valueOf(number).toString().indexOf("3") != -1 ) {
+    		deluxeTrue = true;
     	}
     	
     	if(number%5 == 0 || Integer.valueOf(number).toString().indexOf("5") != -1 ) {
@@ -110,8 +117,8 @@ public class FizzBuzzSolution {
     }
     
     public static void main (String[] args) {
-    	//563 593 653
-    	String response = fizzBuzz(563);
+    	//30 3510 15
+    	String response = fizzBuzz(15);
     	System.out.println(response);
     }
 

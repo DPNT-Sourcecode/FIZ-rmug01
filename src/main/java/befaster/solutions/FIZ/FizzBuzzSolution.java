@@ -10,6 +10,10 @@ public class FizzBuzzSolution {
     	}
     	String response = null;
     	
+    	if(number%5 == 0) {
+    		response = "buzz";
+    	}
+    	
     	if(number%3 == 0) {
     		if(number%5 == 0) {
     			response = "fizz buzz";
@@ -17,9 +21,7 @@ public class FizzBuzzSolution {
     			response = "fizz";
     		}
     	}
-    	if(number%5 == 0) {
-    		response = "buzz";
-    	}
+    	
     	if(number%3 != 0 && number%5 != 0) {
     		response = number.toString();
     	}

@@ -1,10 +1,16 @@
 package befaster.solutions.FIZ;
 
-import befaster.runner.SolutionNotImplementedException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class FizzBuzzSolution {
 
     public static String fizzBuzz(Integer number) {
+    	
+    	String pattern = "([0-9])";//str.matches("([0-9]){6}")
+    	Pattern p = Pattern.compile(pattern);
+    	Matcher m = p.matcher(number.toString());
+    	System.out.println(m.find());
     	if(number <1 || number>9999) {
     		return "Illegal Input";
     	}
@@ -22,6 +28,8 @@ public class FizzBuzzSolution {
     		fizzTrue = true;
     	}
     	
+    	//if(number>10 && number.)
+    	
     	if(fizzTrue && buzzTrue) {
     		response = "fizz buzz";
     	}
@@ -31,7 +39,7 @@ public class FizzBuzzSolution {
     
     public static void main (String[] args) {
     	//13 43 163
-    	String response = fizzBuzz(15);
+    	String response = fizzBuzz(111);
     	System.out.println(response);
     }
 

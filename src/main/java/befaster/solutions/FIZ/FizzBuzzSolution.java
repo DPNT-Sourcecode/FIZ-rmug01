@@ -42,7 +42,7 @@ public class FizzBuzzSolution {
     		fizzTrue = true;
     	}
     	
-    	if(fizzTrue && buzzTrue && (Integer.valueOf(number).toString().indexOf("5") != -1 && Integer.valueOf(number).toString().indexOf("3") != -1) && deluxeTrue) {
+    	if(fizzTrue && buzzTrue && (Integer.valueOf(number).toString().indexOf("5") != -1 || Integer.valueOf(number).toString().indexOf("3") != -1)) {
     		fizzbuzzdeluxetrue = true;
     	}
     	
@@ -103,8 +103,8 @@ public class FizzBuzzSolution {
     }
     
     public static void main (String[] args) {
-    	//666 30 3510
-    	String response = fizzBuzz(3510);
+    	//30 3510 15
+    	String response = fizzBuzz(15);
     	System.out.println(response);
     }
 

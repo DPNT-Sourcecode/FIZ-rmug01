@@ -30,7 +30,13 @@ public class FizzBuzzSolution {
     		
     	}
     	
+    	if(number%5 == 0 || Integer.valueOf(number).toString().indexOf("5") != -1 ) {
+    		response = "buzz";
+    	}
     	
+    	if(number%3 == 0 || Integer.valueOf(number).toString().indexOf("3") != -1 ) {
+    		response = "fizz";
+    	}
     	
     	if(number%5 == 0) {
     		if(Integer.valueOf(number).toString().indexOf("5") != -1 ) {
@@ -78,8 +84,8 @@ public class FizzBuzzSolution {
     }
     
     public static void main (String[] args) {
-    	//36 396
-    	String response = fizzBuzz(396);
+    	//13 43 163
+    	String response = fizzBuzz(163);
     	System.out.println(response);
     }
 

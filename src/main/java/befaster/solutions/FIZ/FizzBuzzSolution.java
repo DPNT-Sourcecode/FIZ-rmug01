@@ -26,7 +26,7 @@ public class FizzBuzzSolution {
     		} else {
     			deluxeResponse = "deluxe";
     		}
-    		
+    		response = deluxeResponse;
     		deluxeTrue = true;
     	}
     	
@@ -62,8 +62,8 @@ public class FizzBuzzSolution {
     }
     
     public static void main (String[] args) {
-    	//11 22 1111
-    	String response = fizzBuzz(555);
+    	//22 4444 11
+    	String response = fizzBuzz(22);
     	System.out.println(response);
     }
 

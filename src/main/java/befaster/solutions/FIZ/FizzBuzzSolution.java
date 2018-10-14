@@ -69,7 +69,7 @@ public class FizzBuzzSolution {
     		response = response+" "+deluxeResponse;
     	}
     	
-        return response;
+        return response.trim();
     }
     
     public static void main (String[] args) {

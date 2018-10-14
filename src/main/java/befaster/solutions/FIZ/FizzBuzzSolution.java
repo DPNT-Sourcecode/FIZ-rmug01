@@ -19,6 +19,7 @@ public class FizzBuzzSolution {
     	boolean deluxeTrue = false;
     	boolean fakeDeluxeTrue = false;
     	boolean fizzbuzzdeluxetrue = false;
+    	boolean fizzbuzzfakedeluxetrue = false;
     	String pattern = "^([0-9])\\1*$";//str.matches("([0-9]){6}")
     	Pattern p = Pattern.compile(pattern);
     	Matcher m = p.matcher(number.toString());
@@ -43,7 +44,13 @@ public class FizzBuzzSolution {
     	}
     	
     	if(fizzTrue && buzzTrue && (Integer.valueOf(number).toString().indexOf("5") != -1 || Integer.valueOf(number).toString().indexOf("3") != -1)) {
-    		fizzbuzzdeluxetrue = true;
+    		if(number%2!=0) {
+    			fizzbuzzfakedeluxetrue = true;
+    		}  else {
+    			fizzbuzzdeluxetrue = true;
+    		}
+    		
+    		
     	}
     	
     	if(number%5 == 0) {
@@ -94,9 +101,9 @@ public class FizzBuzzSolution {
     		response = "fizz buzz";  
     		if(fizzbuzzdeluxetrue) {
     			response = "fizz buzz deluxe"; 
-    		}/*
-    		if(deluxeTrue || fakeDeluxeTrue)
-    		response = response+" "+deluxeResponse;*/
+    		} else if (fizzbuzzfakedeluxetrue) {
+    			response = "fizz buzz fake deluxe"; 
+    		}
     	}
     	
         return response.trim();
@@ -104,7 +111,7 @@ public class FizzBuzzSolution {
     
     public static void main (String[] args) {
     	//30 3510 15
-    	String response = fizzBuzz(15);
+    	String response = fizzBuzz(30);
     	System.out.println(response);
     }
 

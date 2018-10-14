@@ -10,11 +10,11 @@ public class FizzBuzzSolution {
     	}
     	String response = null;
     	
-    	if(number%5 == 0) {
+    	if(number%5 == 0 || Integer.valueOf(number).toString().indexOf("5") != -1) {
     		response = "buzz";
     	}
     	
-    	if(number%3 == 0) {
+    	if(number%3 == 0 || Integer.valueOf(number).toString().indexOf("3") != -1) {
     		if(number%5 == 0) {
     			response = "fizz buzz";
     		} else {

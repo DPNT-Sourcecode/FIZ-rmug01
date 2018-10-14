@@ -27,6 +27,7 @@ public class FizzBuzzSolution {
     			deluxeResponse = "fake deluxe";
     			fakeDeluxeTrue = true;
     		}
+    		deluxeTrue = true;
     		response = deluxeResponse;
     		
     	}
@@ -41,7 +42,7 @@ public class FizzBuzzSolution {
     		fizzTrue = true;
     	}
     	
-    	if(fizzTrue && buzzTrue && (Integer.valueOf(number).toString().indexOf("5") != -1 && Integer.valueOf(number).toString().indexOf("3") != -1)) {
+    	if(fizzTrue && buzzTrue && (Integer.valueOf(number).toString().indexOf("5") != -1 && Integer.valueOf(number).toString().indexOf("3") != -1) && deluxeTrue) {
     		fizzbuzzdeluxetrue = true;
     	}
     	

@@ -57,9 +57,9 @@ public class FizzBuzzSolution {
 	    		response = "buzz";
 	    		if(fakeDeluxeTrue) {
 	    			deluxeResponse = "fake deluxe";
-	    		} else if(deluxeTrue) {
+	    		}/* else if(deluxeTrue && !(Integer.valueOf(number).toString().indexOf("5") != -1 )) {
 	    			deluxeResponse = "deluxe";
-	    		}
+	    		}*/
 	    		response = response+" "+deluxeResponse;	    		
 	    		/*if(deluxeTrue) {
 	    			response = "buzz "+deluxeResponse;
@@ -79,9 +79,9 @@ public class FizzBuzzSolution {
     			response = "fizz";
         		if(fakeDeluxeTrue) {
         			deluxeResponse = "fake deluxe";
-        		} else if(deluxeTrue){
+        		}/* else if(deluxeTrue && !(Integer.valueOf(number).toString().indexOf("3") != -1 )){
         			deluxeResponse = "deluxe";
-        		}
+        		}*/
         		response = response+" "+deluxeResponse;        		
         		/*if(deluxeTrue) {
         			response = "fizz "+deluxeResponse;

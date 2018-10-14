@@ -73,8 +73,8 @@ public class FizzBuzzSolution {
     }
     
     public static void main (String[] args) {
-    	//27 129 201
-    	String response = fizzBuzz(936);
+    	//36 396
+    	String response = fizzBuzz(66);
     	System.out.println(response);
     }
 

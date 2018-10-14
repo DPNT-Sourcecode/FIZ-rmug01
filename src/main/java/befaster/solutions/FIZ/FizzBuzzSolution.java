@@ -13,6 +13,7 @@ public class FizzBuzzSolution {
     	
     	
     	String response = number.toString();
+    	String deluxeResponse = "";
     	boolean fizzTrue = false;
     	boolean buzzTrue = false;
     	boolean deluxeTrue = false;
@@ -21,9 +22,9 @@ public class FizzBuzzSolution {
     	Matcher m = p.matcher(number.toString());
     	if(number>10 && m.matches()) {
     		if(number%2!=0) {
-    			response = "fake deluxe";
+    			deluxeResponse = "fake deluxe";
     		} else {
-    			response = "deluxe";
+    			deluxeResponse = "deluxe";
     		}
     		
     		deluxeTrue = true;
@@ -35,7 +36,7 @@ public class FizzBuzzSolution {
     		response = "buzz";
     		buzzTrue = true;
     		if(deluxeTrue) {
-    			response = "buzz deluxe";
+    			response = "buzz "+deluxeResponse;
     		}
     	}
     	
@@ -43,7 +44,7 @@ public class FizzBuzzSolution {
     		response = "fizz";
     		fizzTrue = true;
     		if(deluxeTrue) {
-    			response = "fizz deluxe";
+    			response = "fizz "+deluxeResponse;
     		}
     	}
     	
@@ -51,7 +52,7 @@ public class FizzBuzzSolution {
     	
     	if(fizzTrue && buzzTrue) {
     		if(deluxeTrue) {
-    			response = "fizz buzz deluxe";
+    			response = "fizz buzz "+deluxeResponse;
     		} else {
     			response = "fizz buzz";
     		}

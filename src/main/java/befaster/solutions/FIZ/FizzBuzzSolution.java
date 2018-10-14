@@ -35,32 +35,40 @@ public class FizzBuzzSolution {
     	
     	
     	
-    	if(number%5 == 0 || Integer.valueOf(number).toString().indexOf("5") != -1) {
-    		response = "buzz";
-    		if(fakeDeluxeTrue) {
-    			deluxeResponse = "fake deluxe";
-    		} else if(deluxeTrue) {
-    			deluxeResponse = "deluxe";
+    	if(number%5 == 0) {
+    		if(Integer.valueOf(number).toString().indexOf("5") != -1 ) {
+    			response = "buzz deluxe";
+    		} else {
+	    		response = "buzz";
+	    		if(fakeDeluxeTrue) {
+	    			deluxeResponse = "fake deluxe";
+	    		} else if(deluxeTrue) {
+	    			deluxeResponse = "deluxe";
+	    		}
+	    		response = response+" "+deluxeResponse;
+	    		buzzTrue = true;
+	    		/*if(deluxeTrue) {
+	    			response = "buzz "+deluxeResponse;
+	    		}*/
     		}
-    		response = response+" "+deluxeResponse;
-    		buzzTrue = true;
-    		/*if(deluxeTrue) {
-    			response = "buzz "+deluxeResponse;
-    		}*/
     	}
     	
-    	if(number%3 == 0 || Integer.valueOf(number).toString().indexOf("3") != -1) {
-    		response = "fizz";
-    		if(fakeDeluxeTrue) {
-    			deluxeResponse = "fake deluxe";
-    		} else if(deluxeTrue){
-    			deluxeResponse = "deluxe";
-    		}
-    		response = response+" "+deluxeResponse;
-    		fizzTrue = true;
-    		/*if(deluxeTrue) {
-    			response = "fizz "+deluxeResponse;
-    		}*/
+    	if(number%3 == 0 ) {
+    		if(Integer.valueOf(number).toString().indexOf("3") != -1) {
+    			
+    		} else {
+    			response = "fizz";
+        		if(fakeDeluxeTrue) {
+        			deluxeResponse = "fake deluxe";
+        		} else if(deluxeTrue){
+        			deluxeResponse = "deluxe";
+        		}
+        		response = response+" "+deluxeResponse;
+        		fizzTrue = true;
+        		/*if(deluxeTrue) {
+        			response = "fizz "+deluxeResponse;
+        		}*/
+    		}    		
     	}
     	
     	if(fizzTrue && buzzTrue) {

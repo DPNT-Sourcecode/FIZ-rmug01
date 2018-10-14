@@ -50,7 +50,7 @@ public class FizzBuzzSolution {
     		if(Integer.valueOf(number).toString().indexOf("5") != -1 ) {
     			if(fakeDeluxeTrue || number%2!=0) {
     				response = "buzz fake deluxe";
-    			} else if(deluxeTrue){
+    			} else{
     				response = "buzz deluxe";
     			}
     		} else {
@@ -72,7 +72,7 @@ public class FizzBuzzSolution {
     		if(Integer.valueOf(number).toString().indexOf("3") != -1) {
     			if(fakeDeluxeTrue  || number%2!=0) {
     				response = "fizz fake deluxe";
-    			} else if(deluxeTrue){
+    			} else{
     				response = "fizz deluxe";
     			}
     		} else {

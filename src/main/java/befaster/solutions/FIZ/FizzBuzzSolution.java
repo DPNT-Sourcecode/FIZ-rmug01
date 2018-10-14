@@ -39,7 +39,7 @@ public class FizzBuzzSolution {
     		response = "buzz";
     		if(fakeDeluxeTrue) {
     			deluxeResponse = "fake deluxe";
-    		} else {
+    		} else if(deluxeTrue) {
     			deluxeResponse = "deluxe";
     		}
     		response = response+" "+deluxeResponse;
@@ -53,7 +53,7 @@ public class FizzBuzzSolution {
     		response = "fizz";
     		if(fakeDeluxeTrue) {
     			deluxeResponse = "fake deluxe";
-    		} else {
+    		} else if(deluxeTrue){
     			deluxeResponse = "deluxe";
     		}
     		response = response+" "+deluxeResponse;
@@ -64,7 +64,8 @@ public class FizzBuzzSolution {
     	}
     	
     	if(fizzTrue && buzzTrue) {
-    		response = "fizz buzz ";  
+    		response = "fizz buzz";  
+    		if(deluxeTrue || fakeDeluxeTrue)
     		response = response+" "+deluxeResponse;
     	}
     	
@@ -72,7 +73,7 @@ public class FizzBuzzSolution {
     }
     
     public static void main (String[] args) {
-    	//36 396 936
+    	//27 129 201
     	String response = fizzBuzz(936);
     	System.out.println(response);
     }

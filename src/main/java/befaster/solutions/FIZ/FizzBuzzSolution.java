@@ -52,12 +52,12 @@ public class FizzBuzzSolution {
 	    		} else if(deluxeTrue) {
 	    			deluxeResponse = "deluxe";
 	    		}
-	    		response = response+" "+deluxeResponse;
-	    		buzzTrue = true;
+	    		response = response+" "+deluxeResponse;	    		
 	    		/*if(deluxeTrue) {
 	    			response = "buzz "+deluxeResponse;
 	    		}*/
     		}
+    		buzzTrue = true;
     	}
     	
     	if(number%3 == 0 ) {
@@ -74,12 +74,12 @@ public class FizzBuzzSolution {
         		} else if(deluxeTrue){
         			deluxeResponse = "deluxe";
         		}
-        		response = response+" "+deluxeResponse;
-        		fizzTrue = true;
+        		response = response+" "+deluxeResponse;        		
         		/*if(deluxeTrue) {
         			response = "fizz "+deluxeResponse;
         		}*/
-    		}    		
+    		}   
+    		fizzTrue = true;
     	}
     	
     	if(fizzTrue && buzzTrue) {
@@ -92,7 +92,7 @@ public class FizzBuzzSolution {
     }
     
     public static void main (String[] args) {
-    	//3 237 369
+    	//563 593 653
     	String response = fizzBuzz(369);
     	System.out.println(response);
     }

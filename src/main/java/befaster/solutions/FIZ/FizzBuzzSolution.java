@@ -55,8 +55,8 @@ public class FizzBuzzSolution {
     }
     
     public static void main (String[] args) {
-    	//811 997 33
-    	String response = fizzBuzz(811);
+    	//11 22 1111
+    	String response = fizzBuzz(1111);
     	System.out.println(response);
     }
 

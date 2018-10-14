@@ -8,7 +8,7 @@ public class FizzBuzzSolution {
     	if(number <1 || number>9999) {
     		return "Illegal Input";
     	}
-    	String response = null;
+    	String response = number.toString();
     	
     	if(number%5 == 0 || Integer.valueOf(number).toString().indexOf("5") != -1) {
     		response = "buzz";

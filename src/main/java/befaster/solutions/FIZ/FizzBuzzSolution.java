@@ -40,7 +40,7 @@ public class FizzBuzzSolution {
     	
     	if(number%5 == 0) {
     		if(Integer.valueOf(number).toString().indexOf("5") != -1 ) {
-    			if(fakeDeluxeTrue) {
+    			if(fakeDeluxeTrue || number%2!=0) {
     				response = "buzz fake deluxe";
     			} else {
     				response = "buzz deluxe";
@@ -62,7 +62,7 @@ public class FizzBuzzSolution {
     	
     	if(number%3 == 0 ) {
     		if(Integer.valueOf(number).toString().indexOf("3") != -1) {
-    			if(fakeDeluxeTrue) {
+    			if(fakeDeluxeTrue  || number%2!=0) {
     				response = "fizz fake deluxe";
     			} else {
     				response = "fizz deluxe";

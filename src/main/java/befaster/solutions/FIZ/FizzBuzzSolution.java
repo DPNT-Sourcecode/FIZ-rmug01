@@ -40,7 +40,11 @@ public class FizzBuzzSolution {
     	
     	if(number%5 == 0) {
     		if(Integer.valueOf(number).toString().indexOf("5") != -1 ) {
-    			response = "buzz deluxe";
+    			if(fakeDeluxeTrue) {
+    				response = "buzz fake deluxe";
+    			} else {
+    				response = "buzz deluxe";
+    			}
     		} else {
 	    		response = "buzz";
 	    		if(fakeDeluxeTrue) {
@@ -58,7 +62,11 @@ public class FizzBuzzSolution {
     	
     	if(number%3 == 0 ) {
     		if(Integer.valueOf(number).toString().indexOf("3") != -1) {
-    			response = "fizz deluxe";
+    			if(fakeDeluxeTrue) {
+    				response = "fizz fake deluxe";
+    			} else {
+    				response = "fizz deluxe";
+    			}
     		} else {
     			response = "fizz";
         		if(fakeDeluxeTrue) {
@@ -84,7 +92,7 @@ public class FizzBuzzSolution {
     }
     
     public static void main (String[] args) {
-    	//13 43 163
+    	//3 33 237
     	String response = fizzBuzz(163);
     	System.out.println(response);
     }

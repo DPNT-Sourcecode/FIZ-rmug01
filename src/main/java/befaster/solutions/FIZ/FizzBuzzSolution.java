@@ -15,22 +15,14 @@ public class FizzBuzzSolution {
     	}
     	
     	if(number%3 == 0 || Integer.valueOf(number).toString().indexOf("3") != -1) {
-    		if(number%5 == 0) {
-    			response = "fizz buzz";
-    		} else {
-    			response = "fizz";
-    		}
-    	}
-    	
-    	if(number%3 != 0 && number%5 != 0) {
-    		response = number.toString();
+    		response = "fizz";
     	}
     	
         return response;
     }
     
     public static void main (String[] args) {
-    	//15 30 105
+    	//13 43 163
     	String response = fizzBuzz(15);
     	System.out.println(response);
     }

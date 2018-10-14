@@ -7,16 +7,24 @@ public class FizzBuzzSolution {
 
     public static String fizzBuzz(Integer number) {
     	
-    	String pattern = "([0-9])";//str.matches("([0-9]){6}")
-    	Pattern p = Pattern.compile(pattern);
-    	Matcher m = p.matcher(number.toString());
-    	System.out.println(m.find());
     	if(number <1 || number>9999) {
     		return "Illegal Input";
     	}
+    	
+    	
     	String response = number.toString();
     	boolean fizzTrue = false;
     	boolean buzzTrue = false;
+    	boolean deluxeTrue = false;
+    	String pattern = "([0-9])";//str.matches("([0-9]){6}")
+    	Pattern p = Pattern.compile(pattern);
+    	Matcher m = p.matcher(number.toString());
+    	if(m.find()) {
+    		response = "deluxe";
+    		deluxeTrue = true;
+    	}
+    	
+    	
     	
     	if(number%5 == 0 || Integer.valueOf(number).toString().indexOf("5") != -1) {
     		response = "buzz";
@@ -31,6 +39,9 @@ public class FizzBuzzSolution {
     	//if(number>10 && number.)
     	
     	if(fizzTrue && buzzTrue) {
+    		if(deluxeTrue) {
+    			response = "fizz buzz deluxe";
+    		}
     		response = "fizz buzz";
     	}
     	
